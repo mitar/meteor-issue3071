@@ -1,0 +1,22 @@
+<head>
+  <title>block-helper</title>
+</head>
+
+<body>
+  {{#noop}}
+     {{> hello}}
+  {{/noop}}
+  {{> helloWithVariable}}
+</body>
+
+<template name="hello">
+  <p>Is 42: {{templateInstanceVariable}}</p>
+</template>
+
+<template name="noop">
+  {{> Template.contentBlock}}
+</template>
+
+<template name="helloWithVariable">
+  {{> hello}}
+</template>
